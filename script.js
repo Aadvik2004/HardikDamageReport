@@ -1,4 +1,4 @@
-const startDate = new Date('2026-05-25'); // today, 2 seasons already done
+const startDate = new Date('2024-10-31'); // today, 2 seasons already done
 const endDate = new Date('2027-05-31');
 const completedRupees = 32700000; // 2 seasons already wasted
 const remainingRupees = 16350000; // 3rd season still to tick
