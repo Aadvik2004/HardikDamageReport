@@ -1,5 +1,5 @@
 const startDate = new Date('2026-05-28'); // for money calculation
-const endDate = new Date('2027-05-31');
+const endDate = new Date('2027-10-31');
 const completedRupees = 327000000; // ₹32.7 Cr (2 seasons)
 const remainingRupees = 163500000; // ₹16.35 Cr (3rd season)
 
