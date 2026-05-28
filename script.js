@@ -1,7 +1,7 @@
-const startDate = new Date('2024-10-31'); // today, 2 seasons already done
+const startDate = new Date('2026-05-28'); // for money calculation
 const endDate = new Date('2027-05-31');
-const completedRupees = 32700000; // 2 seasons already wasted
-const remainingRupees = 16350000; // 3rd season still to tick
+const completedRupees = 32700000;
+const remainingRupees = 16350000;
 
 function getComponents(ms) {
     let s = Math.floor(ms / 1000);
@@ -15,16 +15,17 @@ function getComponents(ms) {
 
 function update() {
     const now = new Date();
+
+    // Money calculation
     const elapsedMs = now - startDate;
     const totalMs = endDate - startDate;
     const perSecond = remainingRupees / (totalMs / 1000);
     const wasted = completedRupees + (elapsedMs / 1000) * perSecond;
-
     document.getElementById('money').textContent = '₹' + Math.floor(wasted).toLocaleString('en-IN');
 
-    // Elapsed since IPL 2025 started
-    const elapsedSinceBeginning = now - new Date('2025-03-22');
-    const el = getComponents(elapsedSinceBeginning);
+    // Elapsed timer — from retention announcement Oct 31, 2024
+    const elapsedSinceRetention = now - new Date('2024-10-31');
+    const el = getComponents(elapsedSinceRetention);
     document.getElementById('el-y').textContent = el.y;
     document.getElementById('el-mo').textContent = el.mo;
     document.getElementById('el-d').textContent = el.d;
