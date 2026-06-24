@@ -321,13 +321,12 @@ p {
     margin-bottom: 60px;
 }
 
-
 .footer {
     text-align: center;
     padding: 24px 0 32px;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
     color: #ffffff;
 }
 
@@ -337,5 +336,17 @@ p {
 }
 
 .footer a:hover {
+    color: #D4AF37;
+}
+
+body.petition-page .footer {
+    color: #031d74;
+}
+
+body.petition-page .footer a {
+    color: #031d74;
+}
+
+body.petition-page .footer a:hover {
     color: #D4AF37;
 }
