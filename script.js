@@ -1,7 +1,7 @@
-const startDate = new Date('2027-03-25'); // 2027 IPL season approx start
+const startDate = new Date('2026-06-01'); // approx when 2026 IPL ended
 const endDate = new Date('2027-10-31');
-const completedRupees = 477000000; // ₹47.7 Cr (2024 + 2025 + 2026)
-const remainingRupees = 163500000; // ₹16.35 Cr (2027 season)
+const completedRupees = 477000000; // ₹47.7 Cr (2024 + 2025 + 2026 done)
+const remainingRupees = 163500000; // ₹16.35 Cr (2027 season ticking live)
 
 function getComponents(ms) {
     let s = Math.floor(ms / 1000);
@@ -20,9 +20,7 @@ function update() {
     const elapsedMs = now - startDate;
     const totalMs = endDate - startDate;
     const perSecond = remainingRupees / (totalMs / 1000);
-    const wasted = now < startDate
-        ? completedRupees
-        : completedRupees + (elapsedMs / 1000) * perSecond;
+    const wasted = completedRupees + (elapsedMs / 1000) * perSecond;
     document.getElementById('money').textContent = '₹' + Math.floor(wasted).toLocaleString('en-IN');
 
     // Elapsed timer — from when Hardik returned to MI (26 Nov 2023)
