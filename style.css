@@ -320,3 +320,22 @@ p {
     margin-top: 30px;
     margin-bottom: 60px;
 }
+
+
+.footer {
+    text-align: center;
+    padding: 24px 0 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #D4AF37;
+}
